@@ -6,15 +6,14 @@ default = ""
 
 def select_field():
     connection = get_connection()
-    sql = "SELECT NAME FROM species"
+    sql = "SELECT id, name FROM combatant"
     cursor = connection.cursor()
 
     cursor.execute(sql)
-    names = cursor.fetchall()
 
     print("<ul>")
-    for name in names:
-        print("<li>" + name[0] + "</li>")
+    for combatantId, name in cursor.fetchall():
+        print("<li><a href=combatantid.py?cid=" + str(combatantId) + ">" + name + "</a></li>")
     print("</ul>")
 
     cursor.close()
