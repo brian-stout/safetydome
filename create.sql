@@ -69,7 +69,7 @@ CREATE TABLE `combatant` (
 
 LOCK TABLES `combatant` WRITE;
 /*!40000 ALTER TABLE `combatant` DISABLE KEYS */;
-INSERT INTO `combatant` VALUES (1,'Person',1,0,0,0),(2,'Sneezy',2,0,0,0),(3,'Winner',3,0,0,0),(4,'Grumpy',4,0,0,0),(5,'Dopey',5,0,0,0),(6,'Happy',6,0,0,0),(7,'The Almighty Paradis',7,0,0,0),(8,'Doc',8,0,0,0),(9,'Sleepy',9,0,0,0),(10,'Death Incarnate',10,0,0,0),(11,'Toilet',11,0,0,0),(12,'Bashful',12,0,0,0),(13,'Your Mailman',13,0,0,0),(14,'No one',14,0,0,0);
+INSERT INTO `combatant` VALUES (1,'Person',1,0,0,0),(2,'Sneezy',2,0,0,0),(3,'Winner',3,0,0,0),(4,'Grumpy',4,0,0,0),(5,'Dopey',5,0,0,0),(6,'Happy',6,0,0,0),(7,'The Almighty Paradis',7,0,0,0),(8,'Doc',8,0,0,0),(9,'Sleepy',9,0,0,0),(10,'Death Incarnate',10,0,0,0),(11,'Toilet',11,0,0,0),(12,'Bashful',12,0,0,0),(13,'Your Mailman',13,0,0,0),(14,'No one',14,0,0,0),(15,'mah dude',1,10,15,20);
 /*!40000 ALTER TABLE `combatant` ENABLE KEYS */;
 UNLOCK TABLES;
 
