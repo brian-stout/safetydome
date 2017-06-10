@@ -1,20 +1,11 @@
 #!/usr/bin/env python3
 from mysql_utils import get_connection
 
-def select_combatant(combatantId):
 
-    connection = get_connection()
-    cursor = connection.cursor()
-    sql = """select combatant.id, combatant.name, species.name, type, (base_atk + plus_atk),
-             (base_dfn + plus_dfn), (base_hp + plus_hp) from combatant, species 
-             where combatant.id = %s and species.id = species_id"""
-
-    cursor.execute(sql, [combatantId])
-
-    row = cursor.fetchone()
-    cursor.close()
-    connection.close()
-    return row
+"""
+    The get_record() function is responsible for returning a tuple of a combatant's total matches
+        fought and total matches won.
+"""
 
 def get_record(combatantId):
     connection = get_connection()
@@ -37,6 +28,14 @@ def get_record(combatantId):
     connection.close()
     return (wins, total)
 
+"""
+    name_lookup() is a function responsible for finding the name of a fighter given a id.
+        While it's possible to grab this information via an additional query when the id
+        is first queried for, on queries from tables not containing the name it can be clearer
+        and more readable to just use a function that grabs the name instead of bloating
+        the sql string up with additional selects and joins.
+"""
+
 def name_lookup(lookup_id):
     connection = get_connection()
     cursor = connection.cursor()
@@ -49,4 +48,3 @@ def name_lookup(lookup_id):
     cursor.close()
     connection.close()
     return name
-    
