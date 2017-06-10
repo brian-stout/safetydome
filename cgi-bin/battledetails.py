@@ -9,6 +9,9 @@ def main():
     #   The user could obviously change the results to whatever he wants
     #   but it'd be kind of silly considering the page is just presenting
     #   information already know in different sections in a different way
+
+    #There's no actual query so the fields don't have to be evaluated just to prevent
+    #   a user from doing what he wants
     combatant_1 = fields.getvalue("cmbt1", default)
     combatant_2 = fields.getvalue("cmbt2", default)
     victor = fields.getvalue("victor", default)
