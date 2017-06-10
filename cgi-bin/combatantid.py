@@ -141,7 +141,9 @@ def main():
         print("<html><head><title>Error!</title>")
         print("<body><center>Error grabbing data!")
     print("<a href='../index.html'>home page</a></t><br/>")
-    print("<a href='combatant.py'>back to all combatants</a>")
+    print("<a href='combatant.py'>back to all combatants</a><br/>")
+    print("<a href='battle.py'>back to battles</a><br/>")
+    print("<a href='ranking.py'>back to rankings</a><br/>")
     print("</center>")
     print("</body></html>")
 
