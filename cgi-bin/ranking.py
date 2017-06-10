@@ -13,8 +13,8 @@ def print_ranks():
     connection = get_connection()
 
     #Gets a count of how many times an Id has appeared in the winner_id column
-    sql = """select winner_id, COUNT(winner_id) from fight group by winner_id order by winner_id
-             ASC;"""
+    sql = """select winner_id, COUNT(winner_id) from fight group by winner_id order by 
+             count(winner_id) DESC;"""
 
     cursor = connection.cursor()
     cursor.execute(sql)
