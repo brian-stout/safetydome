@@ -22,7 +22,7 @@ def print_battles():
     print("<th>Match Length </th>")
     print("</tr>")
 
-    battle_link_fmt = """<td style='text-align:center'><a href='battleDetails.py?cmbt1={0}&cmbt2={1}&victor={2}&str_time={3}&length={4}'>{5}.</a></td>"""
+    battle_link_fmt = """<td style='text-align:center'><a href='battledetails.py?cmbt1={0}&cmbt2={1}&victor={2}&str_time={3}&length={4}'>{5}.</a></td>"""
 
     name_link_fmt = """<td><a href='combatantid.py?cid={0}'>{1}</a></td>"""
 
@@ -60,7 +60,7 @@ def main():
 
     #This begins the Body of hte HTTP Response
     print("<html><head><title>Battles</title>")
-    print("<style> table, th, td { border: 1px solid black; }</style>")
+    print("<style> table, th, td { border: 0.5px solid black; }</style>")
     print("</head>")
     print("<body>")
     print("<center>")
