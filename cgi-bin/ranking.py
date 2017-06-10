@@ -43,10 +43,10 @@ def main():
     print("<html><head><title>Rankings</title>")
     print("<style> table, th, td { border: 0.5px solid black; }</style>")
     print("</head>")
-    print("<body>")
+    print("<body><center>")
     print_ranks()
     print("<a href=../index.html>home page</a>")
-    print("</body></html>")
+    print("</center></body></html>")
 
 
 if __name__ == "__main__":
