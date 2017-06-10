@@ -9,12 +9,11 @@ def print_combatants():
 
     cursor.execute(sql)
 
-    name_link_fmt = """<li><a href='combatantid.py?cid={0}'>{1}</a></li>"""
+    name_link_fmt = """<a href='combatantid.py?cid={0}'>{1}</a>"""
 
-    print("<ul>")
     for combatantId, name in cursor.fetchall():
+        print("<br/>")
         print(name_link_fmt.format(combatantId, name))
-    print("</ul>")
 
     cursor.close()
     connection.close()
@@ -24,13 +23,13 @@ def main():
     # This is the Head of the HTTP response
     print("Content-type: text/html\n")
 
-
     #This begins the Body of hte HTTP Response
     print("<html><head><title>Combatants</title></head>")
     print("<body>")
     print("<center>")
     print("<h1> Current fighters in the WSDL! </h1>")
     print_combatants()
+    print("<br/><br/><a href='../index.html'>home page</a>")
     print("</center>")
     print("</body></html>")
 

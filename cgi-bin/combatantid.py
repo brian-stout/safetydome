@@ -69,7 +69,10 @@ def main():
         print("<td> No value </td>")
     print("</tr>")
     
-    print("</table></center>")
+    print("</table>")
+    print("<a href='../index.html'>home page</a></t><br/>")
+    print("<a href='combatant.py'>back to all combatants</a>")
+    print("</center>")
     print("</body></html>")
 
 if __name__ == "__main__":

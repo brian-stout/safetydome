@@ -66,7 +66,7 @@ def main():
     print("<center>")
 
     print_battles()
-
+    print("<br/><a href='../index.html'>home page</a>")
     print("</center>")
     print("</body></html>")
 
